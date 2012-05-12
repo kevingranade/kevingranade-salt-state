@@ -1,7 +1,6 @@
 include:
   - git
   - apache
-  - php
 
 # workaround until git module is stable or at least generally available.
 statusnet-install:
@@ -11,8 +10,6 @@ statusnet-install:
     - unless: [ -d /var/www/statusnet ]
     - require:
       - pkg: git
-      - pkg: apache
-      - pkg: php
       - file: /var/www
 
 # prefer this if I have master/minions that suport git directive
@@ -24,8 +21,6 @@ statusnet-install:
 #    - target: /var/www/statusnet
 #    - require:
 #      - pkg: git
-#      - pkg: apache
-#      - pkg: php
 #      - file: /var/www
 
 /var/www/statusnet/config.php:
