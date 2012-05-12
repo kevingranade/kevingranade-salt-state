@@ -1,5 +1,5 @@
 include:
-  - git.init
+  - git
   - apache.init
   - php.init
 
