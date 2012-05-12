@@ -16,3 +16,7 @@ apache:
     - source: salt://apache/httpd.conf
     - require:
       - pkg: apache
+
+/var/www/:
+  file:
+    - directory
