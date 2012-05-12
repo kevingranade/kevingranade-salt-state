@@ -1,5 +1,3 @@
 base:
   '*':
-    - statusnet.init
-    - mysql.init
-
+    - statusnet

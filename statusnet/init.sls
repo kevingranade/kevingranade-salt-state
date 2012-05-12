@@ -1,7 +1,7 @@
 include:
   - git
-  - apache.init
-  - php.init
+  - apache
+  - php
 
 statusnet:
   git:
