@@ -11,6 +11,8 @@ apache:
       - file: /etc/httpd/conf/httpd.conf
     - require:
       - user: apache
+      - file: /etc/httpd/conf/vhosts.d
+      - file: /var/www/default
   group:
     - present
     - require:
@@ -32,5 +34,13 @@ apache:
       - pkg: apache
 
 /var/www:
+  file:
+    - directory
+
+/var/www/default:
+  file:
+    - directory
+
+/etc/httpd/conf/vhosts.d:
   file:
     - directory
