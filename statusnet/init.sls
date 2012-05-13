@@ -6,7 +6,7 @@ include:
 statusnet-install:
   cmd:
     - run
-    - name git clone git://gitorious.org/statusnet/mainline.git /var/www/statusnet
+    - name: git clone git://gitorious.org/statusnet/mainline.git /var/www/statusnet
     - unless: [ -d /var/www/statusnet ]
     - require:
       - pkg: git

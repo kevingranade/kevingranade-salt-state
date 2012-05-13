@@ -7,7 +7,7 @@ apache:
   service:
     - running
     - watch:
-      -file: /etc/httpd/conf/httpd.conf
+      - file: /etc/httpd/conf/httpd.conf
 
 # need to replace this guy with some vhost config files.
 /etc/httpd/conf/httpd.conf:
@@ -17,6 +17,6 @@ apache:
     - require:
       - pkg: apache
 
-/var/www/:
+/var/www:
   file:
     - directory
