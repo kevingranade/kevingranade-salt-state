@@ -9,6 +9,19 @@ apache:
     - name: httpd
     - watch:
       - file: /etc/httpd/conf/httpd.conf
+    - require:
+      - user: apache
+  group:
+    - present
+    - require:
+      - user: apache
+  user:
+    - present
+    - shell: /bin/false
+    - groups:
+      - apache
+    - require:
+      - pkg: apache
 
 # need to replace this guy with some vhost config files.
 /etc/httpd/conf/httpd.conf:
