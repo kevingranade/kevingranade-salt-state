@@ -6,6 +6,7 @@ apache:
 #  - version: 2.2.22-3 # supported by installed, but not flexible enough
   service:
     - running
+    - name: httpd
     - watch:
       - file: /etc/httpd/conf/httpd.conf
 
